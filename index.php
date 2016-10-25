@@ -21,10 +21,7 @@ define('APP_DEBUG',True);
 define('APP_PATH','./Apps/');
 define('APP_NAME', 'dance');
 
-// jquery easyui 主题
-define('APP_THEMES','metro-gray');
-
-define('BIND_MODULE','Joke');
+#define('BIND_MODULE','Broker');
 
 // 引入ThinkPHP入口文件
 require './ThinkPHP/ThinkPHP.php';
