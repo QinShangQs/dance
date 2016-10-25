@@ -9,9 +9,10 @@ return array (
 		'DB_PORT' => 3306, // 端口
 		'DB_PREFIX' => 'sd_', // 数据库表前缀
 		
-		'MODULE_ALLOW_LIST' => array (
+		'MODULE_ALLOW_LIST' => array (				
+				'Apis',
+				'Broker',
 				'Dancer',
-				'Apis' 
 		),
 		'DEFAULT_MODULE' => 'Dancer', // 默认模块
 		'URL_MODEL' => 2, // URL模式
