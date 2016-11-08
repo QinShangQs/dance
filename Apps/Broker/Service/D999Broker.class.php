@@ -19,6 +19,22 @@ class D999Broker extends BaseBroker implements IBroker {
 			}
 			
 			parent::createItem(1, $name, 0, $size, $url);
+		}else if(preg_match("/open\_(\S+?)\.swf/i", $html, $out)){
+			$api = "http://vxml.56.com/json/{$out[1]}/?src=site&ref=www.56.com&t=0.23835816606879234";
+
+			$jsonStr = HttpHelper::file_get($api);
+			$json = HttpHelper::parseJson($jsonStr);
+			if(empty($json) || $json['status'] != 1){
+				parent::createErrorMsg('56解析失败！');
+			}else{
+				$no = 1;
+				$name = $json['info']['Subject'];
+				$seconds = floor(intval($json['info']['rfiles'][0]['totaltime']) / 1000);
+				$size = $json['info']['rfiles'][0]['filesize'];
+				$url = $json['info']['rfiles'][0]['url'];
+				parent::createItem($no, $name, $seconds, $size, $url);
+			}
+			
 		}else{
 			parent::createErrorMsg('解析失败！');
 		}

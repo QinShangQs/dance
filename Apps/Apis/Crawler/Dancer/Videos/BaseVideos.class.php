@@ -20,6 +20,7 @@ class BaseVideos {
 	}
 	
 	protected  function createResult($video_name,$alias_name, $v_type, $source, $keyword,$logo,$link_url,$seconds, $album_desc,$publish_date) {
+
 		$data = array (
 				'uid' => static::getUid($source, $v_type, $video_name),
 				'video_name' => static::filter($video_name),

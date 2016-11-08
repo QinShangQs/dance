@@ -53,4 +53,8 @@ class HttpHelper{
 	
 		return $size;
 	}
+	
+	public static function parseJson($str){
+		return json_decode($str, true);
+	}
 }
