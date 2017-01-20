@@ -9,7 +9,9 @@ class D999Broker extends BaseBroker implements IBroker {
 		$html = HttpHelper::file_get($url);
 		$rc = preg_match("/webkit_playlist = \['(\S+)'\];/i", $html, $out);
 		if($rc > 0){
-			$url = $out[1];
+		    $out[1] = str_replace("'", '', $out[1]);
+		    $urls = explode(',', $out[1]);
+			$url = $urls[1];
 			$size = HttpHelper::getContentLength($url);
 			$name = 'unknown';
 			

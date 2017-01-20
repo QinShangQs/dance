@@ -11,7 +11,7 @@ class TestController extends Controller {
 	public function keywords(){
 		$worker = KeyWordsWorkFactory::create();
 		$result = $worker->doing();
-		pre($result);
+		$this->ajaxReturn($result);
 	}
 	
 	public function videos(){

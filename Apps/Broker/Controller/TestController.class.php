@@ -7,5 +7,8 @@ class TestController extends Controller {
         $result = BrokerFactory::doDataResult($url, $subid);
         
         pre($result);
+        
+        video_play($result['datas'][0]['url']);
     }
+    
 }

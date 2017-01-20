@@ -14,6 +14,10 @@ function pre($content) {
 	echo "</pre>";
 }
 
+function video_play($url){
+	echo '<video controls="" autoplay="" name="media"><source src="'.$url.'" type="video/mp4"></video>';
+}
+
 /**
  * 验证验证码
  *

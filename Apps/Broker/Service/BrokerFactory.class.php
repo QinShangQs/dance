@@ -3,7 +3,7 @@
 namespace Broker\Service;
 
 class BrokerFactory {
-	const CHECK_URL_VALID = "/(www\.999d\.com|gcwdq\.com)/";
+	const CHECK_URL_VALID = "/(www\.999d\.com|gcwdq\.com|m\.toutiao\.com)/";
 	
 	public static function doDataResult($url, $subid = 0){
 		$lowerurl = strtolower ( $url );
@@ -22,6 +22,10 @@ class BrokerFactory {
 			case 'gcwdq.com':
 				$sign = 'gcwdq';
 				$borker = new GcwdqBroker();
+				break;
+			case 'm.toutiao.com':
+				$sign = 'toutiao';
+				$borker = new ToutiaoBroker();
 				break;
 		}
 

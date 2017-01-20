@@ -57,4 +57,27 @@ class HttpHelper{
 	public static function parseJson($str){
 		return json_decode($str, true);
 	}
+	
+	public static function getJumpUrl($url, $refer = null) {
+		$url = str_replace(' ','',$url);
+		do {//do.while循环：先执行一次，判断后再是否循环
+			$curl = curl_init($url);
+			curl_setopt($curl, CURLOPT_HEADER, 1);
+			if(!empty($refer)){
+				curl_setopt($curl, CURLOPT_REFERER, $refer);
+			}
+			curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
+			curl_setopt($curl, CURLOPT_TIMEOUT, 10);
+			$header = curl_exec($curl);
+			curl_close($curl);
+			preg_match('|Location:\s(.*?)\s|',$header,$tdl);
+			if(strpos($header,"Location:")){
+				$url=$tdl ? $tdl[1] :  null ;
+			}
+			else{
+				return $url.'';
+				break;
+			}
+		}while(true);
+	}
 }
