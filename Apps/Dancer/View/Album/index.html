@@ -1,0 +1,29 @@
+<extend name="./template/master" />
+<block name="title">{$keyword} 专辑</block>
+<block name="head">
+	<link href="__PUBLIC__/dancer/css/album.css" rel="stylesheet"  type="text/css" >
+</block>
+<block name="content">
+	
+<div class="titlebar">
+  <div class="titlebar_txt">
+    <div class="titlebar_txt_icon">Album</div>
+    <div class="titlebar_txt_headline">{$keyword} 专辑</div>
+  </div>
+  <dl>
+    <dt></dt>
+    <dd></dd>    
+  </dl>  
+</div>
+<div class="content4">
+	<div class="content4_vessel">
+		<php>foreach($datas as $dk => $dv){</php>
+		    <dl>
+		      <dt class="titleimgact" style="background: url({$dv.logo})"><a  href="/play/{$dv.id}"></a></dt>
+		      <dd><a href="/play/{$dv.id}">{$dv.video_name}</a></dd>
+		    </dl>
+        <php>}</php>
+	</div>
+</div>
+
+</block>

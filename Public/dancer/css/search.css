@@ -1,0 +1,16 @@
+﻿@charset "utf-8";
+/* CSS Document */
+.titlebar {margin:auto; width:1200px; height:36px; padding-top:14px}
+.titlebar_txt {height:26px; line-height:26px}
+.titlebar_txt_icon {float:left; width:26px; height:26px; border-radius:13px; background:#0aa770; color:#fff; font-size:2px; text-align:center; font-family:'stylefont'}
+.titlebar_txt_headline {float:left; padding:0 14px; font-size:18px}
+.titlebar dl {height:9px; overflow:hidden}
+.titlebar dl dt {float:left; width:108px; height:8px; border-bottom:#0aa770 1px solid; overflow:hidden}
+.titlebar dl dd {float:right; width:1092px; height:8px; border-bottom:#ccc 1px solid; overflow:hidden}
+.content4 {margin:auto; width:1200px; padding-bottom:18px; overflow:hidden}
+.content4_vessel {margin-left:-40px; width:1280px; overflow:hidden}
+.content4_vessel dl {float:left; width:240px; height:177px; padding:18px 40px 0 40px}
+.content4_vessel dt {width:240px; height:150px; border-radius:4px; background:#f7f7f7 url(http://thumb.media.999d.com/cover/1/1/7/5/117453.jpg) no-repeat center center; background-size:110%}
+.content4_vessel dd {height:18px; line-height:18px; font-size:14px; padding-top:9px; background:url(../images/icon_play.png) no-repeat 222px 8px}
+.titleimgact a, .titleimgact a:visited {width:240px; height:150px; text-decoration:none; display: inline-block; border-radius:4px}
+.titleimgact a:hover, .titleimgact a:active {background:#000 url(../images/icon_play.png) no-repeat center center; filter: alpha(opacity=40); opacity: 0.4}

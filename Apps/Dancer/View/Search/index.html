@@ -1,0 +1,50 @@
+<extend name="./template/master" />
+<block name="title">{$keyword} 搜索结果</block>
+<block name="head">
+	<link href="__PUBLIC__/dancer/css/search.css?<php>echo time()</php>" rel="stylesheet"  type="text/css" >
+</block>
+<block name="content">
+	
+	<div class="titlebar">
+	  <div class="titlebar_txt">
+	    <div class="titlebar_txt_icon">Search</div>
+	    <div class="titlebar_txt_headline">关于"{$keyword}"专辑的搜索结果</div>
+	  </div>
+	  <dl>
+	    <dt></dt>
+	    <dd></dd>    
+	  </dl>  
+	</div>
+	<div class="content4">
+		<div class="content4_vessel">
+			<php>foreach($albums as $ak => $av){</php>
+			    <dl>
+			      <dt class="titleimgact"  style="background: url({$av.logo})"><a href="/play/{$av.id}"></a></dt>
+			      <dd><a href="/play/{$av.id}">{$av.video_name}</a></dd>
+			    </dl>
+		    <php>}</php>                        
+		</div>
+	</div>
+
+	<div class="titlebar">
+	  <div class="titlebar_txt">
+	    <div class="titlebar_txt_icon">Search</div>
+	    <div class="titlebar_txt_headline">关于"{$keyword}"舞蹈的搜索结果</div>
+	  </div>
+	  <dl>
+	    <dt></dt>
+	    <dd></dd>    
+	  </dl>  
+	</div>
+	<div class="content4">
+		<div class="content4_vessel">
+			<php>foreach($infos as $ik => $iv){</php>
+		    <dl>
+		      <dt class="titleimgact" style="background: url({$iv.logo})"><a href="/play/{$iv.id}"></a></dt>
+		      <dd><a href="/play/{$iv.id}">{$iv.video_name}</a></dd>
+		    </dl>
+		    <php>}</php>
+	    </div>
+	</div>
+
+</block>

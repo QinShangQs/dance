@@ -1,0 +1,63 @@
+<extend name="./template/master" />
+<block name="title">舞曲列表</block>
+<block name="head">
+	<link href="__PUBLIC__/dancer/css/dance.css" rel="stylesheet"  type="text/css" >
+</block>
+<block name="content">
+	
+
+ <div class="titlebar">
+  <div class="titlebar_txt">
+    <div class="titlebar_txt_icon">Dance</div>
+    <div class="titlebar_txt_headline">舞曲检索</div>
+  </div>
+  <dl>
+    <dt></dt>
+    <dd></dd>    
+  </dl>  
+</div>
+<div class="letterlist">
+	<div class="letterlist_vessel">
+    <a class="letter_this" class="" href="#a">A</a>
+    <a class="letter_this" href="#b">B</a>
+    <a class="letter_this" href="#c">C</a>
+    <a class="letter_this" href="#d">D</a>
+    <a class="letter_this" href="#e">E</a>
+    <a class="letter_this" href="#f">F</a>
+    <a class="letter_this" href="#g">G</a>
+    <a class="letter_this" href="#h">H</a>
+    <a class="letter_this" href="#i">I</a>
+    <a class="letter_this" href="#j">J</a>
+    <a class="letter_this" href="#k">K</a>
+    <a class="letter_this" href="#l">L</a>
+    <a class="letter_this" href="#m">M</a>
+    <a class="letter_this" href="#n">N</a>
+    <a class="letter_this" href="#o">O</a>
+    <a class="letter_this" href="#p">P</a>
+    <a class="letter_this" href="#q">Q</a>
+    <a class="letter_this" href="#r">R</a>                        
+    <a class="letter_this" href="#s">S</a>                        
+    <a class="letter_this" href="#t">T</a>
+    <a class="letter_this" href="#u">U</a>
+    <a class="letter_this" href="#w">W</a>                                                
+    <a class="letter_this" href="#x">X</a>                                                      
+    <a class="letter_this" href="#y">Y</a>                                                            
+    <a class="letter_this" href="#z">Z</a>                                                                  
+	</div>
+</div>
+
+<php>foreach($letters as $lk=> $lv){</php>
+	<div class="dancelist">
+	  <div class="dancelist_latter">
+	    <a name="{$lk}"></a>
+	    <span>{$lk}</span>
+	  </div>
+	  <ul>
+	  	<php>foreach($lv as $lvk=> $lvv){</php>
+	    	<li><a href="/album/{$lvv.keyword}">{$lvv.keyword}</a></li>
+	    <php>}</php>
+	  </ul>
+	</div>
+<php>}</php>
+
+</block>

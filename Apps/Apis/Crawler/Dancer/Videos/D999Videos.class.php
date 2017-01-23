@@ -6,7 +6,7 @@ use Apis\Crawler\HttpHelper;
 use Think\Log;
 
 class D999Videos extends BaseVideos implements IVideos {
-	const _PAGE_LIMIT = 3;
+	const _PAGE_LIMIT = 100;
 	public function run($keyword = null) {
 		for($i = 0; $i < static::_PAGE_LIMIT; $i ++) {
 			$api = 'http://www.999d.com/index.php?v=video&tid=0&type=new&difficulty=0&ajax=1&page=' . $i . '&_=' . time ();

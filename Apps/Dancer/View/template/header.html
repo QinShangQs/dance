@@ -1,0 +1,35 @@
+
+
+<!--head start-->
+<header>
+<div class="head">
+  <div class="head_logo"></div>
+  <div class="head_search">
+    <div class="head_search_border">
+      <div class="head_search_input"><input id="skey" style="border:none" type="text" placeholder="输入舞曲名称、类型" /></div>
+      <div class="head_search_button"><button type="button" class="pure-button" onclick="search()"></button></div>
+    </div>  
+  </div>
+</div>  
+</header>
+<nav>
+<div class="nav">
+  <div class="nav_bar">
+    <div class="nav_bar_list">
+      <a id="nav_home" href="/">首页</a><a id="nav_muisc" href="wuqu">舞曲</a><a id="nav_top" href="top">榜单</a>
+    </div>
+  </div>
+</div>
+</nav>
+<!--head end-->
+
+<script type="text/javascript">
+	function search(){
+		var key = $.trim($("#skey").val());
+		if(key){
+			location.href = '/search/' + key;
+		}else{
+			alert('输入舞曲名称、类型');
+		}
+	}
+</script>

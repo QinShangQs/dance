@@ -15,6 +15,7 @@ class BaseLogic {
 	public function update(\stdClass $instance) {
 		return $this->_repository->data ( $instance )->save ();
 	}
+
 	public function remove($id) {
 		return $this->_repository->delete ( $id );
 	}
