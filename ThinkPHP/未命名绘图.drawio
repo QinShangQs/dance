@@ -1,4 +1,4 @@
-<mxfile host="www.draw.io" modified="2020-02-22T10:05:52.139Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.130 Safari/537.36" etag="9GnSX8ufGhX9nUB3TWdY" version="12.7.4" type="github" pages="3">
+<mxfile host="www.draw.io" modified="2020-02-22T10:08:03.645Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.130 Safari/537.36" etag="qwsc2mY1VP_B-dcsBVCC" version="12.7.4" type="github" pages="3">
   <diagram name="Page-1" id="13e1069c-82ec-6db2-03f1-153e76fe0fe0">
     <mxGraphModel dx="882" dy="623" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" background="#ffffff" math="0" shadow="0">
       <root>
@@ -675,8 +675,11 @@
         <mxCell id="1jTeD4jk9rwKvjMl29PI-103" value="佣金变现-&amp;gt;打入新氧钱包&lt;br&gt;-&amp;gt;计算可提现金额和税" style="rounded=0;whiteSpace=wrap;html=1;fontSize=10;" vertex="1" parent="1jTeD4jk9rwKvjMl29PI-1">
           <mxGeometry x="-900" y="10" width="160" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="1jTeD4jk9rwKvjMl29PI-106" value="订单结算及提现流程" style="text;strokeColor=none;fillColor=none;html=1;fontSize=24;fontStyle=1;verticalAlign=middle;align=center;" vertex="1" parent="1jTeD4jk9rwKvjMl29PI-1">
+        <mxCell id="1jTeD4jk9rwKvjMl29PI-106" value="佣金结算及提现流程" style="text;strokeColor=none;fillColor=none;html=1;fontSize=24;fontStyle=1;verticalAlign=middle;align=center;" vertex="1" parent="1jTeD4jk9rwKvjMl29PI-1">
           <mxGeometry x="-1250" y="-110" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="1jTeD4jk9rwKvjMl29PI-107" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=10;" edge="1" parent="1jTeD4jk9rwKvjMl29PI-1" source="1jTeD4jk9rwKvjMl29PI-106" target="1jTeD4jk9rwKvjMl29PI-106">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
